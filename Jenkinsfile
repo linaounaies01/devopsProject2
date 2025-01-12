@@ -4,14 +4,14 @@ pipeline {
         pollSCM('H/5 * * * *')
     }
     environment {
-        DOCKERHUB_CREDENTIALS = credentials('dockerhub') // ID pour Docker Hub
-        IMAGE_NAME_SERVER = 'louayelaroui/mern-server' // Remplacez [username] par votre utilisateur Docker Hub
-        IMAGE_NAME_CLIENT = 'louayelaroui/mern-client'
+        DOCKERHUB_CREDENTIALS = credentials('dockerhub') // ID for Docker Hub
+        IMAGE_NAME_SERVER = 'linaounaies01/mern-server' // Replace [username] with your Docker Hub username
+        IMAGE_NAME_CLIENT = 'linaounaies01/mern-client'
     }
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'git@github.com:Louayelaroui/tp1_devops.git', credentialsId: 'Gitlab_ssh'
+                git branch: 'main', url: 'https://github.com/linaounaies01/devopsProject2'
             }
         }
         stage('Build Server Image') {
