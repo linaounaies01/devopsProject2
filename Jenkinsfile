@@ -5,8 +5,8 @@ pipeline {
     }
     environment {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub') // ID pour Docker Hub
-        IMAGE_NAME_SERVER = 'linaounaies01/mern-server' // Remplacez [username] par votre utilisateur Docker Hub
-        IMAGE_NAME_CLIENT = 'linaounaies01/mern-client'
+        IMAGE_NAME_SERVER = 'linaounaies760/mern-server' // Remplacez [username] par votre utilisateur Docker Hub
+        IMAGE_NAME_CLIENT = 'linaounaies760/mern-client'
     }
     stages {
         stage('Checkout') {
