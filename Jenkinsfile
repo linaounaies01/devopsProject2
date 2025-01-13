@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/linaounaies01/devopsProject2', credentialsId: 'Gitlab_ssh'
+                git branch: 'main', url: 'https://github.com/linaounaies01/devopsProject2'
             }
         }
         stage('Build Server Image') {
